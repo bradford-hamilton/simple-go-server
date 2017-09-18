@@ -4,6 +4,8 @@ import (
   "fmt"
   "log"
   "net/http"
+  "todos-model"
+  "github.com/bradford-hamilton/simple-go-server/models/todos-model.go"
 
   "github.com/gorilla/mux"
 )
