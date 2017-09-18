@@ -4,8 +4,7 @@ import (
   "fmt"
   "log"
   "net/http"
-  "todos-model"
-  "github.com/bradford-hamilton/simple-go-server/models/todos-model.go"
+  "time"
 
   "github.com/gorilla/mux"
 )
@@ -35,3 +34,11 @@ func TodoShow(w http.ResponseWriter, r *http.Request) {
 
   fmt.Fprintln(w, "Todo Show: ", todoId)
 }
+
+type Todo struct {
+    Name      string
+    Completed bool
+    Due       time.Time
+}
+
+type Todos []Todo
